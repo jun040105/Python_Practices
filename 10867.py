@@ -13,7 +13,9 @@ while len(a) > 0:
 
 x = int(input())
 a = list(map(int, input().split()))
+
 a = sorted(list(set(a)))
+
 for i in range(len(a)):
     print(a[i], end=" ")
 
