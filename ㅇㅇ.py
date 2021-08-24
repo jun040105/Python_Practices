@@ -4,4 +4,4 @@ for i in range(9):
     x.append(int(input()))
 
 print(max(x))
-print(x.index(max(x)+1))
+print(x.index(max(x))+1)
