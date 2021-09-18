@@ -3,28 +3,34 @@ N = int(input())
 MN = []
 index = []
 #index.clear()
-
+x = 0
 for i in range(M):
     MN.append(list(map(int, input().split())))
 
 print(MN)
 
 def FindIndex(Value):
+
+    x = 0
+
     for i in range(M):
         for j in range(N):
             if MN[i][j] == Value:
-                MN[i][j] = -1
+                if MN.count(Value) > 1:
+                    MN[i][j] = -1
                 coor = (i+1) * (j+1)
+                print("coor:", coor)
+                x = 1
                 if coor == 1:
-                    print("yes")
-                    return("yes")
+                    return("yes")                
                 else: FindIndex(coor)
-            elif MN[i][j] == -1:
-                print("no")
-                return("no")
+        
+    if x == 0:
+            return("no")
+  
                 
 
-FindIndex(M*N)
+print(FindIndex(M*N))
 
 
 

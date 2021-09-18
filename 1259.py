@@ -1,11 +1,11 @@
-x = 1
+x = "1"
 
-while x != 0:
+while x != "0":
     x = str(input())
     p = 1
     
     for i in range(len(x)//2):
-            if x[i] != x[-i-1]:
+            if x[i] != x[-1-i]:
                 p = 0
 
     if x != "0":
